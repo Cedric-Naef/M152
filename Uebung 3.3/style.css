@@ -1,0 +1,42 @@
+.person {
+  margin: 20px;
+  display: inline-block;
+  -webkit-box-shadow: #777279 1px 1px;
+          box-shadow: #777279 1px 1px;
+  background-color: gainsboro;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.person_title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.person_text {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.person_image {
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.person_button {
+  background-color: lightgreen;
+  text-align: center;
+  width: 100%;
+  padding: 5px 20px;
+}
+
+.person:hover {
+  -webkit-transform: scale(1.1, 1.1);
+          transform: scale(1.1, 1.1);
+}
+
+.person:hover button {
+  background-color: green;
+}
+/*# sourceMappingURL=style.css.map */
