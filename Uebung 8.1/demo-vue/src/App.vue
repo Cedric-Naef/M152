@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="main">
     <Subject :subject="subject" />
     <Summary :summary="summary" />
 </div>
@@ -32,52 +32,12 @@ import Summary from './components/Summary.vue'
                     },
                 ]
             }
-        },
-        methods: {
-            getAverage: function(grades) {
-                let total = 0;
-                grades.forEach(grade => total += grade);
-                const avg = total / grades.length;
-                return Math.round(avg * 2) / 2; // Round to 0.5
-            }
-        },
-        computed: {
-            totalAverage: function() {
-                let subjectsTotal = 0;
-                this.subjects.forEach(subject => {
-                    subjectsTotal += this.getAverage(subject.grades);
-                })
-                const avg = subjectsTotal / this.subjects.length;
-                return Math.round(avg * 2) / 2;
-            },
-            pointsBelow4: function() {
-                let total = 0;
-                this.subjects.forEach(subject => {
-                    const subjectAvg = this.getAverage(subject.grades);
-                    if (subjectAvg < 4) {
-                        total += (4 - subjectAvg)
-                    }
-                });
-                return total;
-            },
-            passed: function() {
-                if (this.totalAverage < 4) {
-                    return false;
-                }
-                if (this.pointsBelow4 > 1 && this.totalAverage < 4.2) {
-                    return false;
-                }
-                if (this.pointsBelow4 > 2 && this.totalAverage < 4.5) {
-                    return false;
-                }
-                return true;
-            }
         }
     }
 </script>
 
 <style lang="scss">
-    .main {
+   .main {
         max-width: 500px;
         margin: 0 auto;
         background-color: #eee;

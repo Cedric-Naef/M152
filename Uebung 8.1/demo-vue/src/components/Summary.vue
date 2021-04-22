@@ -1,10 +1,8 @@
 <template>
-  <div class="main">
         Gesamter Durschnitt: {{ totalAverage }}<br />
         Mangelpunkte: {{ pointsBelow4 }}
         <hr />
         {{ passed ? 'Bestanden!' : 'Nicht bestanden!' }}
-    </div>
 </template>
 
 <script>
@@ -77,13 +75,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.main {
-        max-width: 500px;
-        margin: 0 auto;
-        background-color: #eee;
-        padding: 20px;
-        h1 {
-            text-align: center;
-        }
-    }
+
 </style>
